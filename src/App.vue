@@ -3,7 +3,6 @@
     <div id="nav">
       <router-link to="/">Home</router-link>
       <router-link to="/about">About This Site</router-link>
-      <router-link to="/community">Community Involvement</router-link>
     </div>
     <router-view/>
   </div>
@@ -38,8 +37,10 @@ h3 {
 }
 a {
   color: #363030;
+  transition: 0.3s;
   &:hover {
     color: rgb(145, 145, 145);
+  transition: 0.3s;
   }
 }
 p {

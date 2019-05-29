@@ -8,26 +8,26 @@
 
 <script>
 export default {
-  name: "DataList",
+  name: 'DataList',
   props: {
-    type: String
+    type: String,
   },
-  data: function() {
+  data() {
     return {
       dataResult: [],
-      linked_items: this.$parent.linked_items
+      linked_items: this.$parent.linked_items,
     };
   },
   mounted() {
-    var linkedType = this.type;
-    var dataResult = [];
-    this.$parent.linked_items.forEach(function(element) {
+    const linkedType = this.type;
+    const dataResult = [];
+    this.$parent.linked_items.forEach((element) => {
       if (element[linkedType]) {
         dataResult.push(element[linkedType].value);
       }
     });
     this.dataResult = dataResult;
-  }
+  },
 };
 </script>
 
