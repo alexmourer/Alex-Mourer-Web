@@ -48,7 +48,7 @@ export default {
     });
 
     deliveryClient
-      .item("about")
+      .item("community")
       .getObservable()
       .subscribe(response => {
         this.post_title = response.item.title.value;
