@@ -2,11 +2,17 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 
+// eslint-disable-next-line consistent-return
 router.beforeEach((to, from, next) => {
-  const nearestWithTitle = to.matched.slice().reverse().find(r => r.meta && r.meta.title);
+  const nearestWithTitle = to.matched
+    .slice()
+    .reverse()
+    .find(r => r.meta && r.meta.title);
 
-  const nearestWithMeta = to.matched.slice().reverse().find(r => r.meta && r.meta.metaTags);
-  const previousNearestWithMeta = from.matched.slice().reverse().find(r => r.meta && r.meta.metaTags);
+  const nearestWithMeta = to.matched
+    .slice()
+    .reverse()
+    .find(r => r.meta && r.meta.metaTags);
 
   if (nearestWithTitle) document.title = nearestWithTitle.meta.title;
 
@@ -14,22 +20,22 @@ router.beforeEach((to, from, next) => {
 
   if (!nearestWithMeta) return next();
 
-  nearestWithMeta.meta.metaTags.map((tagDef) => {
-    const tag = document.createElement('meta');
+  nearestWithMeta.meta.metaTags
+    .map((tagDef) => {
+      const tag = document.createElement('meta');
 
-    Object.keys(tagDef).forEach((key) => {
-      tag.setAttribute(key, tagDef[key]);
-    });
+      Object.keys(tagDef).forEach((key) => {
+        tag.setAttribute(key, tagDef[key]);
+      });
 
-    tag.setAttribute('data-vue-router-controlled', '');
+      tag.setAttribute('data-vue-router-controlled', '');
 
-    return tag;
-  })
+      return tag;
+    })
     .forEach(tag => document.head.appendChild(tag));
 
   next();
 });
-
 
 Vue.config.productionTip = false;
 new Vue({

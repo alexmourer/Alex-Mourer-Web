@@ -11,14 +11,8 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import DataList from '@/components/DataList.vue';
-
 export default {
   name: 'about',
-  components: {
-    DataList,
-  },
   data() {
     return {
       dataLoaded: false,
@@ -29,13 +23,11 @@ export default {
     };
   },
   mounted() {
+    /* eslint-disable global-require */
     const KenticoCloud = require('kentico-cloud-delivery');
+    /* eslint-enable global-require */
 
-    class Article extends KenticoCloud.ContentItem {
-      constructor() {
-        super();
-      }
-    }
+    class Article extends KenticoCloud.ContentItem {}
 
     const deliveryClient = new KenticoCloud.DeliveryClient({
       projectId: 'e75ce49a-4064-0098-b307-d687a6a064ab',

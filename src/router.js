@@ -5,6 +5,7 @@ import Home from './views/Home.vue';
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -15,11 +16,13 @@ export default new Router({
         metaTags: [
           {
             name: 'description',
-            content: 'Alex Mourer\'s portfolio website. Front-End Developer, Designer, Creator, and Community Enthusiast.',
+            content:
+              "Alex Mourer's portfolio website. Front-End Developer, Designer, Creator, and Community Enthusiast.",
           },
           {
             property: 'og:description',
-            content: 'Alex Mourer\'s portfolio website. Front-End Developer, Designer, Creator, and Community Enthusiast.',
+            content:
+              "Alex Mourer's portfolio website. Front-End Developer, Designer, Creator, and Community Enthusiast.",
           },
         ],
       },
@@ -29,15 +32,17 @@ export default new Router({
       name: 'about',
       component: () => import('./views/About.vue'),
       meta: {
-        title: 'About Alex Mourer\'s portfolio website',
+        title: "About Alex Mourer's portfolio website",
         metaTags: [
           {
             name: 'description',
-            content: "Alex Mourer's portfolio website. Front-End Developer, Designer, Creator, and Community Enthusiast.",
+            content:
+              "Alex Mourer's portfolio website. Front-End Developer, Designer, Creator, and Community Enthusiast.",
           },
           {
             property: 'og:description',
-            content: "Alex Mourer's portfolio website. Front-End Developer, Designer, Creator, and Community Enthusiast.",
+            content:
+              "Alex Mourer's portfolio website. Front-End Developer, Designer, Creator, and Community Enthusiast.",
           },
         ],
       },

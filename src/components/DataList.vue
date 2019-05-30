@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="item in dataResult">
+    <div v-for="item in dataResult" v-bind:key="item">
       <div v-html="item"/>
     </div>
   </div>

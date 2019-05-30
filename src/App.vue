@@ -74,7 +74,7 @@ p {
   margin-bottom: 30px;
   h3 {
     font-size: 1.35em;
-    margin: 15px 0;
+    margin: 20px 0 12px;
   }
   p {
     margin: 0 0 3px 5px;
