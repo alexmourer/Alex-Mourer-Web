@@ -60,6 +60,7 @@
           <DataList type="in_the_news"/>
         </div>
       </div>
+      <Footer/>
     </div>
   </div>
 </template>
@@ -67,12 +68,14 @@
 <script>
 import Loader from "@/components/Loader.vue";
 import DataList from "@/components/DataList.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "home",
   components: {
     Loader,
-    DataList
+    DataList,
+    Footer
   },
   data() {
     return {

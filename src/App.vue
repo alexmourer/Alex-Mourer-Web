@@ -21,8 +21,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #363030;
-  -webkit-animation: background 16s ease infinite;
-  animation: background 16s ease infinite;
+  -webkit-animation: background 10s ease infinite;
+  animation: background 10s ease infinite;
 }
 #app {
   max-width: 900px;
@@ -91,6 +91,10 @@ p {
     }
   }
 }
+#footer {
+  text-align: center;
+  font-size: 0.8em;
+}
 
 @media (min-width: 800px) {
   .bottom {
@@ -107,7 +111,7 @@ p {
     background-color: #fafeff;
   }
   50% {
-    background-color: #fafffd;
+    background-color: #fff;
   }
   100% {
     background-color: #fafeff;
@@ -119,7 +123,7 @@ p {
     background-color: #fafeff;
   }
   50% {
-    background-color: #fafffd;
+    background-color: #fff;
   }
   100% {
     background-color: #fafeff;

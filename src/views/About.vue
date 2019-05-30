@@ -9,17 +9,20 @@
         <div class="hr">&nbsp;</div>
       </div>
       <div v-html="post_body"/>
+      <Footer/>
     </div>
   </div>
 </template>
 
 <script>
 import Loader from "@/components/Loader.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "about",
   components: {
-    Loader
+    Loader,
+    Footer
   },
   data() {
     return {
