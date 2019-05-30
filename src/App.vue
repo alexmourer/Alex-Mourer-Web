@@ -20,8 +20,9 @@ body {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafeff;
   color: #363030;
+  -webkit-animation: background 16s ease infinite;
+  animation: background 16s ease infinite;
 }
 #app {
   max-width: 900px;
@@ -40,7 +41,7 @@ a {
   transition: 0.3s;
   &:hover {
     color: rgb(145, 145, 145);
-  transition: 0.3s;
+    transition: 0.3s;
   }
 }
 p {
@@ -98,6 +99,30 @@ p {
   }
   .col {
     width: 47%;
+  }
+}
+
+@-webkit-keyframes background {
+  0% {
+    background-color: #fafeff;
+  }
+  50% {
+    background-color: #fafffd;
+  }
+  100% {
+    background-color: #fafeff;
+  }
+}
+
+@keyframes background {
+  0% {
+    background-color: #fafeff;
+  }
+  50% {
+    background-color: #fafffd;
+  }
+  100% {
+    background-color: #fafeff;
   }
 }
 </style>
